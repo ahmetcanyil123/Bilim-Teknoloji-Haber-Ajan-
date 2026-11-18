@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Başlık ve Ayarlar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛰️ Bilim &amp; Teknoloji İstihbarat"
+                android:textColor="#F8FAFC"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="30 prestijli kaynaktan haberleri tarayın. Word (.docx) ve PDF üretir."
+                android:textColor="#94A3B8"
+                android:textSize="11.5sp" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#1E293B"
+            android:text="⚙️"
+            android:textColor="#CBD5E1"
+            android:textSize="14sp"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <!-- Harf Giriş Alanı -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etLetter"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="#1E293B"
+            android:hint="Harf girin: a, b, c, d, e, f, k, y"
+            android:imeOptions="actionGo"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingHorizontal="12dp"
+            android:textColor="#38BDF8"
+            android:textColorHint="#64748B"
+            android:textSize="13.5sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRunLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#2563EB"
+            android:text="Raporla"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <!-- Hızlı Kategori Butonları (1. Satır: a, b, c, d) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatA"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[a] TR Bilim"
+            android:textColor="#F8FAFC"
+            android:textSize="10.5sp"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatB"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[b] Küresel"
+            android:textColor="#F8FAFC"
+            android:textSize="10.5sp"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatC"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[c] Teknoloji"
+            android:textColor="#F8FAFC"
+            android:textSize="10.5sp"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatD"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[d] Girişim"
+            android:textColor="#F8FAFC"
+            android:textSize="10.5sp"
+            app:cornerRadius="6dp" />
+    </LinearLayout>
+
+    <!-- Hızlı Kategori Butonları (2. Satır: e, f, k, y) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatE"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[e] Yerel TR"
+            android:textColor="#F8FAFC"
+            android:textSize="10.5sp"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatF"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E293B"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[f] Enstitü"
+            android:textColor="#F8FAFC"
+            android:textSize="10.5sp"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatK"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E3A8A"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[k] ⚛️ Kuantum"
+            android:textColor="#67E8F9"
+            android:textSize="10.5sp"
+            android:textStyle="bold"
+            app:cornerRadius="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCatY"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#1E3A8A"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="[y] 🤖 AI"
+            android:textColor="#A5B4FC"
+            android:textSize="10.5sp"
+            android:textStyle="bold"
+            app:cornerRadius="6dp" />
+    </LinearLayout>
+
+    <!-- Durum & İlerleme -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hazır. Bir harf seçin (a, b, c, d, e, f, k, y)."
+            android:textColor="#CBD5E1"
+            android:textSize="11.5sp" />
+    </LinearLayout>
+
+    <!-- Web Önizleme -->
+    <WebView
+        android:id="@+id/webPreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_weight="1"
+        android:background="#0F172A" />
+
+    <!-- Word ve PDF Aksiyonları -->
+    <LinearLayout
+        android:id="@+id/layoutExportActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenPdf"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#DC2626"
+            android:text="📄 PDF Aç"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenDocx"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2563EB"
+            android:text="📝 Word Aç"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShareFiles"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#334155"
+            android:text="📤 Paylaş"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
